@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>html2image</title>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/canvas2image.js"></script>
+    <style>
+    	table{background:#fff;}
+    	table tr:nth-child(2n){
+    		background:red;
+    	}
+    </style>
+    <script>
+    	$(function(){
+    		$('#btnSave').on('click',function(){
+    			html2canvas($("table"), {
+					  onrendered: function(canvas) {
+					    //document.body.appendChild(canvas);
+					    var image=Canvas2Image.saveAsPNG(canvas,true);
+					    document.body.appendChild(image);
+					  }
+				});
+    		});
+    	});
+    </script>
+</head>
+<body>
+	<div id=content style="border:1px lightblue solid">
+	    <span>Hello world</span>
+	    <br>
+	    <span><h2>Are you hear me?!</h2></span>
+	    <table border=1 bordercolor=#fff>
+								<thead>
+									<tr>
+										<td>
+											<p>职能单位</p>
+											<p>服务性质</p>
+										</td>
+										<td>单位名称</td>
+										<td> 地 址</td>
+										<td>联系电话</td>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="10" class="rowspan10">行政服务机构</td>
+										<td>江北区卫生和计划生育局</td>
+										<td>江北区新马路 183 号</td>
+										<td>
+											<p>87660842</p>
+											<p>87668859</p>
+										</td>
+									</tr>
+									<tr>
+										<td>江北区家庭婚育保健服务中心</td>
+										<td>江北区新义路 175 号</td>
+										<td>
+											<p>87668854</p>
+										</td>
+									</tr>
+									<tr>
+										<td>中马街道计生办</td>
+										<td>江北区新马路 178 号</td>
+										<td>
+											<p>87356097</p>
+										</td>
+									</tr>
+									<tr>
+										<td>白沙街道计生办</td>
+										<td>江北区白沙路 189 号</td>
+										<td>
+											<p>87669627</p>
+										</td>
+									</tr>
+									<tr>
+										<td>孔浦街道计生办</td>
+										<td>江北区文汇路 118 号</td>
+										<td>
+											<p>87624020</p>
+										</td>
+									</tr>
+									<tr>
+										<td>文教街道计生办</td>
+										<td>江北区育才路 200 号</td>
+										<td>
+											<p>87201170</p>
+										</td>
+									</tr>
+									<tr>
+										<td>甬江街道计生办</td>
+										<td>江北区环城北路东段 335 号</td>
+										<td>
+											<p>87637185</p>
+										</td>
+									</tr>
+									<tr>
+										<td>庄桥街道计生办</td>
+										<td>江北区北环西路 500 号</td>
+										<td>
+											<p>83021890</p>
+										</td>
+									</tr>
+									<tr>
+										<td>洪塘街道计生办</td>
+										<td>江北区洪塘街道宁沁路 347 号</td>
+										<td>
+											<p>87586154</p>
+										</td>
+									</tr>
+									<tr>
+										<td>慈城镇计生办</td>
+										<td>江北区慈城镇尚志路 60 号</td>
+										<td>
+											<p>87578551</p>
+										</td>
+									</tr>
+
+									<tr>
+										<td rowspan="10" class="rowspan10">妇儿保服务机构</td>
+										<td>江北区妇幼保健院</td>
+										<td>江北区清江路 466 号</td>
+										<td>
+											<p>55003900</p>
+										</td>
+									</tr>
+									<tr>
+										<td>姚江社区卫生服务中心</td>
+										<td>江北区清江路 466 号</td>
+										<td>
+											<p>55003900</p>
+										</td>
+									</tr>
+									<tr>
+										<td>中马街道计生办</td>
+										<td>江北区新马路 178 号</td>
+										<td>
+											<p>87356097</p>
+										</td>
+									</tr>
+									<tr>
+										<td>白沙街道社区卫生服务中心</td>
+										<td>江北区新马路 50 号</td>
+										<td>
+											<p>55012680</p>
+										</td>
+									</tr>
+									<tr>
+										<td>孔浦街道社区卫生服务中心</td>
+										<td>江北区大庆北路 55 号</td>
+										<td>
+											<p>87620162</p>
+										</td>
+									</tr>
+									<tr>
+										<td>文教街道社区卫生服务中心</td>
+										<td>江北区双东路 99 号</td>
+										<td>
+											<p>87672955</p>
+										</td>
+									</tr>
+									<tr>
+										<td>甬江街道社区卫生服务中心 </td>
+										<td>江北区梅堰路 537 弄 18 号 </td>
+										<td>
+											<p>55715006</p>
+										</td>
+									</tr>
+									<tr>
+										<td>庄桥街道社区卫生服务中心 </td>
+										<td>江北区庄桥街道外环东路 10 号</td>
+										<td>
+											<p>87582446</p>
+										</td>
+									</tr>
+									<tr>
+										<td>洪塘街道社区卫生服务中心</td>
+										<td>江北区洪塘街道通惠路 5 号</td>
+										<td>
+											<p>83096032</p>
+										</td>
+									</tr>
+									<tr>
+										<td>慈城镇中心卫生院</td>
+										<td>江北区慈城镇竺巷东路 34 号</td>
+										<td>
+											<p>87591290</p>
+										</td>
+									</tr>
+
+									<tr>
+										<td rowspan="4" class="rowspan10">辖区助产机构</td>
+										<td>宁波市第九医院</td>
+										<td>江北区榭嘉路 619 弄 68 号</td>
+										<td>
+											<p>56803981</p>
+										</td>
+									</tr>
+
+									<tr>
+										<td>宁波市妇儿医院北部院区</td>
+										<td>江北区慈城新城慈水西街 266 号</td>
+										<td>
+											<p>87083300</p>
+										</td>
+									</tr>
+									<tr>
+										<td>宁波大学医学院附属医院（市第三医院）</td>
+										<td>江北区人民路 247 号</td>
+										<td>
+											<p>87035555</p>
+										</td>
+									</tr>
+
+									<tr>
+										<td>宁波东易大名医院</td>
+										<td>江北区育才路 86 弄 86 号</td>
+										<td>
+											<p>28917777</p>
+										</td>
+									</tr>
+
+								</tbody>
+							</table>
+	</div>
+	<button id="btnSave">save</button>
+</body>
+</html>
